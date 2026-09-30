@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05070a">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Configuración | PMC Finanzas</title>
+
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/configuracion.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <div id="securityLoader" class="security-loader">
+        <div class="security-loader-content">
+            <img src="imagenes/logo.png" alt="PMC Auto Detailing">
+            <div class="security-spinner"></div>
+            <span>Verificando acceso...</span>
+        </div>
+    </div>
+
+    <div id="app" class="app hidden">
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+
+                <a href="dashboard.html" class="sidebar-brand">
+                    <img src="imagenes/logo.png" alt="PMC Auto Detailing">
+
+                    <div>
+                        <strong>PMC</strong>
+                        <span>FINANZAS</span>
+                    </div>
+                </a>
+
+                <button
+                    type="button"
+                    class="sidebar-close"
+                    id="sidebarClose"
+                    aria-label="Cerrar menú"
+                >
+                    <i data-lucide="x"></i>
+                </button>
+
+            </div>
+
+            <div class="sidebar-content">
+
+                <span class="menu-label">GENERAL</span>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html" class="nav-item">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span>Resumen</span>
+                    </a>
+
+                    <a href="movimientos.html" class="nav-item">
+                        <i data-lucide="arrow-left-right"></i>
+                        <span>Movimientos</span>
+                    </a>
+
+                    <a href="ingresos.html" class="nav-item">
+                        <i data-lucide="circle-arrow-up"></i>
+                        <span>Ingresos</span>
+                    </a>
+
+                    <a href="egresos.html" class="nav-item">
+                        <i data-lucide="circle-arrow-down"></i>
+                        <span>Egresos</span>
+                    </a>
+
+                    <a href="inversiones.html" class="nav-item">
+                        <i data-lucide="landmark"></i>
+                        <span>Inversiones</span>
+                    </a>
+
+                </nav>
+
+                <span class="menu-label menu-label-space">
+                    PLANIFICACIÓN
+                </span>
+
+                <nav class="sidebar-nav">
+
+                    <a href="recurrentes.html" class="nav-item">
+                        <i data-lucide="repeat-2"></i>
+                        <span>Recurrentes</span>
+                    </a>
+
+                    <a href="analisis.html" class="nav-item">
+                        <i data-lucide="chart-no-axes-combined"></i>
+                        <span>Análisis</span>
+                    </a>
+
+                    <a href="proyecciones.html" class="nav-item">
+                        <i data-lucide="trending-up"></i>
+                        <span>Proyecciones</span>
+                    </a>
+
+                    <a href="simulador.html" class="nav-item">
+                        <i data-lucide="calculator"></i>
+                        <span>Simulador</span>
+                    </a>
+
+                    <a href="metas.html" class="nav-item">
+                        <i data-lucide="target"></i>
+                        <span>Metas</span>
+                    </a>
+
+                </nav>
+
+                <span class="menu-label menu-label-space">
+                    SISTEMA
+                </span>
+
+                <nav class="sidebar-nav">
+
+                    <a href="reportes.html" class="nav-item">
+                        <i data-lucide="file-chart-column"></i>
+                        <span>Reportes</span>
+                    </a>
+
+                    <a href="configuracion.html" class="nav-item active">
+                        <i data-lucide="settings"></i>
+                        <span>Configuración</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-user">
+
+                    <div class="user-avatar" id="sidebarAvatar">
+                        P
+                    </div>
+
+                    <div class="sidebar-user-info">
+                        <strong id="sidebarUserName">Usuario</strong>
+                        <span>Acceso financiero</span>
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="logout-button"
+                    id="logoutButton"
+                    aria-label="Cerrar sesión"
+                >
+                    <i data-lucide="log-out"></i>
+                </button>
+
+            </div>
+
+        </aside>
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu"
+                        id="mobileMenu"
+                        aria-label="Abrir menú"
+                    >
+                        <i data-lucide="menu"></i>
+                    </button>
+
+                    <div>
+                        <span class="page-eyebrow">PMC FINANZAS</span>
+                        <h1>Configuración</h1>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="system-status">
+                        <span></span>
+                        Sistema activo
+                    </div>
+
+                    <div class="topbar-user">
+
+                        <div class="topbar-avatar" id="topbarAvatar">
+                            P
+                        </div>
+
+                        <div>
+                            <strong id="topbarUserName">
+                                Usuario
+                            </strong>
+
+                            <span>Finanzas</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="settings-content">
+
+                <section class="settings-heading">
+
+                    <span class="settings-eyebrow">
+                        CONFIGURACIÓN FINANCIERA
+                    </span>
+
+                    <h2>Información inicial del negocio</h2>
+
+                    <p>
+                        Define la base sobre la cual PMC Finanzas
+                        calculará balances, recuperación y proyecciones.
+                    </p>
+
+                </section>
+
+                <div class="settings-layout">
+
+                    <section class="settings-card">
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon">
+                                <i data-lucide="landmark"></i>
+                            </div>
+
+                            <div>
+                                <h3>Situación financiera inicial</h3>
+
+                                <p>
+                                    Registra el capital que actualmente
+                                    debe recuperar el negocio.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <form id="financialConfigForm">
+
+                            <div class="settings-field">
+
+                                <label for="initialInvestment">
+                                    Inversión inicial por recuperar
+                                </label>
+
+                                <div class="money-input">
+
+                                    <span>$</span>
+
+                                    <input
+                                        type="number"
+                                        id="initialInvestment"
+                                        min="0"
+                                        step="0.01"
+                                        inputmode="decimal"
+                                        placeholder="0.00"
+                                        required
+                                    >
+
+                                    <small>MXN</small>
+
+                                </div>
+
+                                <p class="field-help">
+                                    Ingresa el monto total que PMC
+                                    necesita recuperar. Escríbelo como
+                                    número positivo.
+                                </p>
+
+                            </div>
+
+                            <div class="settings-field">
+
+                                <label for="startDate">
+                                    Fecha de inicio del seguimiento
+                                </label>
+
+                                <div class="standard-input">
+
+                                    <i data-lucide="calendar-days"></i>
+
+                                    <input
+                                        type="date"
+                                        id="startDate"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="settings-field">
+
+                                <label for="currency">
+                                    Moneda principal
+                                </label>
+
+                                <div class="standard-input">
+
+                                    <i data-lucide="badge-dollar-sign"></i>
+
+                                    <select id="currency">
+                                        <option value="MXN">
+                                            Peso mexicano (MXN)
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div
+                                id="configMessage"
+                                class="config-message"
+                            ></div>
+
+                            <button
+                                type="submit"
+                                class="save-settings"
+                                id="saveSettingsButton"
+                            >
+
+                                <span class="save-normal">
+                                    <i data-lucide="save"></i>
+                                    Guardar configuración
+                                </span>
+
+                                <span class="save-loading">
+                                    <span class="small-spinner"></span>
+                                    Guardando...
+                                </span>
+
+                            </button>
+
+                        </form>
+
+                    </section>
+
+                    <aside class="settings-summary">
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon">
+                                <i data-lucide="calculator"></i>
+                            </div>
+
+                            <span>Balance inicial</span>
+
+                            <strong id="previewBalance">
+                                $0.00
+                            </strong>
+
+                            <p>
+                                Este será el punto de partida
+                                del sistema financiero.
+                            </p>
+
+                        </div>
+
+                        <div class="information-card">
+
+                            <div>
+                                <i data-lucide="info"></i>
+                            </div>
+
+                            <section>
+                                <strong>
+                                    ¿Cómo funcionará?
+                                </strong>
+
+                                <p>
+                                    Si registras una inversión por
+                                    recuperar de $60,000, el sistema
+                                    comenzará con un balance de
+                                    -$60,000.
+                                </p>
+
+                                <p>
+                                    Los ingresos aumentarán el balance
+                                    y los nuevos egresos o inversiones
+                                    lo reducirán.
+                                </p>
+                            </section>
+
+                        </div>
+
+                        <div class="security-card">
+
+                            <i data-lucide="shield-check"></i>
+
+                            <div>
+                                <strong>Información privada</strong>
+
+                                <p>
+                                    Esta configuración solo puede ser
+                                    consultada por usuarios con acceso
+                                    financiero.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script
+        type="module"
+        src="js/configuracion.js"
+    ></script>
+
+</body>
+</html>
